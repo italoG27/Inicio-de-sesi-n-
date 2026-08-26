@@ -12,6 +12,15 @@ function guardarUsuario() {
     } else {
         alert("Para registrarte bien chilero, el usuario debe ser 'admin' y la contraseña '1234'");
     }
+    
+    if (txtUser == "mico" && txtPass == "12345") {
+        miUsuario = txtUser;
+        miClave = txtPass;
+        alert("Te registrarte engazado Ahora puedes iniciar sesión primo .");
+    } else {
+        alert("Para registrarte bien chilero, el usuario debe ser 'mico' y la contraseña '12345'");
+    }
+
 }
 
 function validarIngreso() {
