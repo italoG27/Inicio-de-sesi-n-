@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.caja-padre {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.caja-hijo1, .caja-hijo2 {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 30px 40px;
+    border-radius: 1px;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 38px;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.subtitulo-login {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 24px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 9px 7px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #a8a8a8;
+}
+
+button {
+    width: 100%;
+    padding: 7px;
+    background-color: #0095f6;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1877f2;
+}
+
+.linea-divisora {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #dbdbdb;
+}
+
+.texto-suave {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin-bottom: 15px;
+}
+
+.barra-arriba {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.contenedor-posts {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tarjeta-post {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cabecera-post {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.avatar-usuario {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #e1306c;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.avatar-dos {
+    background-color: #0095f6;
+}
+
+.nombre-autor {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.zona-imagen {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #efefef;
+}
+
+.foto-publicada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pie-post {
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+.botones-reaccion {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.icono-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    width: auto;
+}
+
+.contador-likes {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.texto-descripcion {
+    line-height: 1.4;
+}
+
+.texto-descripcion .nombre-autor {
+    font-weight: 600;
+    margin-right: 6px;
+}
