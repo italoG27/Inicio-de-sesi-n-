@@ -20,7 +20,7 @@ function validarIngreso() {
 
     if (userIngresado == miUsuario && passIngresada == miClave && miUsuario != "") {
         alert("Bienvenido a Stanlygram la red social más engazadora primo.");
-        window.location.href = "stanlygram.html";
+        window.location.href = "stanleygram.html";
     } else {
         alert("Datos incorrectos o aún no te has registrado ponete las pilas primo.");
     }
