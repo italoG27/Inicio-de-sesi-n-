@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #e2e2e2;
+    background-color: #eff1ee;
     color: #262626;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ body {
     font-style: italic;
     font-size: 38px;
     margin-bottom: 15px;
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background: linear-gradient(45deg, #c7892b, #d0b27c, #4c687f, #0f3351, #3776a2);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
