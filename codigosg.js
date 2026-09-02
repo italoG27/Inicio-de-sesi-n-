@@ -1,128 +1,61 @@
-var miUsuario = "";
-var miClave = "";
-//guaarda los datos y las contras del usuario en el reistro cchilero
+// Arreglos donde se guardarán todos los usuarios y contraseñas que se vayan registrando
+const usuariosRegistrados = [];
+const contraseniasRegistradas = [];
+
 function guardarUsuario() {
-    var txtUser = document.getElementById("campoUserReg").value;
-    var txtPass = document.getElementById("campoPassReg").value;
+    // Obtenemos los valores de los campos HTML del registro
+    var txtUser = document.getElementById("campoUserReg").value.trim();
+    var txtPass = document.getElementById("campoPassReg").value.trim();
 
-
-    //primer usuario que esta permitido en el registro desde "ana123" hasta "lucia99" si es correcto te va a tirar un mensaje de aviso y si no es correcto no te va a dejar registrarte primo
-    if (txtUser == "ana123" && txtPass == "clave123") {
-        miUsuario = txtUser;
-        miClave = txtPass;
-        alert("Te registrarte engazado Ahora puedes iniciar sesión primo .");
-    } else {
-       
+    // Validamos que los campos no estén vacíos
+    if (txtUser === "" || txtPass === "") {
+        alert("Por favor llena todos los campos para registrarte, primo.");
+        return;
     }
 
-
-    if (txtUser == "carlos_dev" && txtPass == "codigo2026") {
-        miUsuario = txtUser;
-        miClave = txtPass;
-        alert("Te registrarte engazado Ahora puedes iniciar sesión primo .");
-    } else {
-       
+    // Comprobamos si el usuario ya fue registrado anteriormente
+    if (usuariosRegistrados.includes(txtUser)) {
+        alert("Ese usuario ya existe. Elegí otro nombre, primo.");
+        return;
     }
 
-    if (txtUser == "lucia99" && txtPass == "segura77") {
-        miUsuario = txtUser;
-        miClave = txtPass;
-        alert("Te registrarte engazado Ahora puedes iniciar sesión primo .");
-    } else {
-        
-    }
+    // Guardamos el nuevo usuario y su contraseña en los arreglos
+    usuariosRegistrados.push(txtUser);
+    contraseniasRegistradas.push(txtPass);
 
-    if (txtUser == "carlos_dev" && txtPass == "codigo2026") {
-        miUsuario = txtUser;
-        miClave = txtPass;
-        alert("Te registrarte engazado Ahora puedes iniciar sesión primo .");
-    } else {
-       
-    }
+    alert("¡Usuario " + txtUser + " registrado con éxito! Ya podés iniciar sesión.");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Opcional: limpiar los campos del formulario tras registrarse
+    document.getElementById("campoUserReg").value = "";
+    document.getElementById("campoPassReg").value = "";
 }
- //valida los datos que se van a ingresar en el login si es correcto te dejara pasar y si no es correcto te tira un mensaje de que los datos son incorrectos o que todavia no te registrarte con ese usuario
+
+
 function validarIngreso() {
-    var userIngresado = document.getElementById("campoUserLog").value;
-    var passIngresada = document.getElementById("campoPassLog").value;
+    // Obtenemos los valores ingresados en el Login
+    var userIngresado = document.getElementById("campoUserLog").value.trim();
+    var passIngresada = document.getElementById("campoPassLog").value.trim();
 
-    if (userIngresado == miUsuario && passIngresada == miClave && miUsuario != "") {
-        alert("Bienvenido a Stanlygram la red social más engazadora primo.");
-        window.location.href = "stanleygram.html";
+    if (userIngresado === "" || passIngresada === "") {
+        alert("Ingresá tu usuario y contraseña para iniciar sesión.");
+        return;
+    }
+
+    let accesoPermitido = false;
+
+    // Recorremos los arreglos para verificar si las credenciales coinciden
+    for (let i = 0; i < usuariosRegistrados.length; i++) {
+        if (usuariosRegistrados[i] === userIngresado && contraseniasRegistradas[i] === passIngresada) {
+            accesoPermitido = true;
+            break; // Detener el bucle porque ya lo encontró
+        }
+    }
+
+    // Respuesta según la verificación
+    if (accesoPermitido) {
+        alert("Bienvenido a nuestra pagina de reparaciones chileras primo.");
+        window.location.href = "prueba.html";
     } else {
-        alert("Datos incorrectos o aún no te has registrado ponete las pilas primo.");
-    }
-}    
-
-// el arrays con los datos registrados
-const usuariosRegistrados = ["ana123", "carlos_dev", "lucia99"];
-const contraseniasRegistradas = ["clave123", "codigo2026", "segura77"];
-
-// datsos que va a ingresar el usuario a ver si esta bien o no 
-const usuarioIngresado = "carlos_dev";
-const contraseniaIngresada = "codigo2026";
-
-let accesoPermitido = false;
-
-// bucle de arrayts
-for (let i = 0; i < usuariosRegistrados.length; i++) {
-    // Comparamos el usuario y la contraseña en la misma posición 'i'
-    if (usuariosRegistrados[i] === usuarioIngresado && contraseniasRegistradas[i] === contraseniaIngresada) {
-        accesoPermitido = true;
-        break; // se para el bucle porque se encontro el dato correcto primo
+        alert("Datos incorrectos o aún no te has registrado, ponete las pilas primo.");
     }
 }
-
-// mensaje de aviso si es correcto o no le va a tirar distintos mensajes de aviso
-if (accesoPermitido) {
-    console.log("¡Acceso correcto! Bienvenido, " + usuarioIngresado);
-} else {
-    console.log("Usuario o contraseña incorrectos.");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
