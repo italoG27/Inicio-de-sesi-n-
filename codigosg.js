@@ -23,7 +23,7 @@ function guardarUsuario() {
     usuariosRegistrados.push(txtUser);
     contraseniasRegistradas.push(txtPass);
 
-    alert("¡Usuario " + txtUser + " registrado con éxito! Ya podés iniciar sesión.");
+    alert("Listo " + txtUser + " registradooo, Ya podés iniciar sesión primo me llega");
 
     // Opcional: limpiar los campos del formulario tras registrarse
     document.getElementById("campoUserReg").value = "";
@@ -37,7 +37,7 @@ function validarIngreso() {
     var passIngresada = document.getElementById("campoPassLog").value.trim();
 
     if (userIngresado === "" || passIngresada === "") {
-        alert("Ingresá tu usuario y contraseña para iniciar sesión.");
+        alert("Ingresá tu usuario y contraseña para iniciar sesión carnaval.");
         return;
     }
 
