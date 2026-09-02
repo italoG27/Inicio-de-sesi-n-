@@ -208,3 +208,39 @@ button:hover {
     margin-right: 6px;
 }
 
+
+
+
+
+
+
+
+
+
+
+.navegacion {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 10vh;
+    padding-top: 10px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

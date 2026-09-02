@@ -32,6 +32,25 @@ function guardarUsuario() {
         
     }
 
+    if (txtUser == "carlos_dev" && txtPass == "codigo2026") {
+        miUsuario = txtUser;
+        miClave = txtPass;
+        alert("Te registrarte engazado Ahora puedes iniciar sesión primo .");
+    } else {
+       
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
